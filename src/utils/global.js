@@ -1,7 +1,7 @@
-const BASE_IMG_URL = 'http://localhost:8088/almall/image/avatar/'
-const BASE_CATEGORY_ICON_UMG_URL = 'http://localhost:8088/almall/image/category/'
-const BASE_FILE_UPLOAD_URL = 'http://localhost:8088/file/upload'
-const BASE_GOOD_IMG_URL = 'http://localhost:8088/almall/image/goods/'
+const BASE_IMG_URL = 'http://localhost:8089/almall/store/image/avatar/'
+const BASE_CATEGORY_ICON_UMG_URL = 'http://localhost:8089/almall/store/image/category/'
+const BASE_FILE_UPLOAD_URL = 'http://localhost:8089/store/file/upload'
+const BASE_GOOD_IMG_URL = 'http://localhost:8089/almall/store/image/goods/'
 
 
 export default {

@@ -4,6 +4,9 @@ import login from '@/views/login'
 import home from '@/views/home'
 import { getToken } from '@/utils/token'
 import dashbord from '@/views/dashboard'
+import goods from '@/views/goods'
+import order from '@/views/order'
+import orderDetail from '@/views/order/detail'
 
 
 Vue.use(VueRouter)
@@ -26,6 +29,18 @@ const router = new VueRouter({
           {
             path: '/dashbord',
             component: dashbord
+          },
+          {
+            path: '/goodsList',
+            component: goods
+          },
+          {
+            path: '/orderList',
+            component: order
+          },
+          {
+            path: '/orderDetail',
+            component: orderDetail
           }
         ]
       }

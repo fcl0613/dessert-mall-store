@@ -13,9 +13,9 @@
                 <i class="el-icon-arrow-down el-icon--right"></i>
               </span>
               <el-dropdown-menu slot="dropdown">
-                <el-dropdown-item>首页</el-dropdown-item>
-                <el-dropdown-item>个人信息</el-dropdown-item>
-                <el-dropdown-item>退出</el-dropdown-item>
+                <el-dropdown-item @click.native="toDashboardPage">首页</el-dropdown-item>
+                <!-- <el-dropdown-item>个人信息</el-dropdown-item> -->
+                <el-dropdown-item @click.native="logout">退出</el-dropdown-item>
               </el-dropdown-menu>
             </el-dropdown>
           </div>
@@ -62,11 +62,12 @@
 
 <script>
 import globalContant from '@/utils/global'
+import {removeToken} from '@/utils/token'
 export default {
   data() {
     return {
       base_url: globalContant.BASE_IMG_URL,
-      avatar: 'salt_fish.gif',
+      avatar: 'moren.jpg',
       activeMenuItem: '',
       menuList: [
         {
@@ -91,7 +92,7 @@ export default {
               id: '2-1',
               menuName: '订单列表',
               icon: 'el-icon-s-order',
-              path: '/goodsList'
+              path: '/orderList'
             }
           ]
         }
@@ -103,6 +104,14 @@ export default {
       console.log(path)
       this.activeMenuItem = path
     },
+    toDashboardPage() {
+      this.$router.push('/dashbord')
+    },
+    logout() {
+      console.log('sssss')
+      removeToken()
+      this.$router.push('/login')
+    }
   },
 }
 </script>
